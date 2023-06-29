@@ -5,22 +5,40 @@ import { UpdateMonsterDto } from './dto/update-monster.dto';
 @Injectable()
 export class MonstersService {
   create(createMonsterDto: CreateMonsterDto) {
-    return 'This action adds a new monster';
+    return {
+      id: 1,
+      name: 'Monster',
+      type: 'Dragon',
+      age: 100,
+      features: ['Fire Breath', 'Claws', 'Wings']
+    }
   }
 
   findAll() {
-    return `This action returns all monsters`;
+    return [
+      {
+        id: 1,
+        name: 'Monster',
+        type: 'Dragon',
+        age: 100,
+        features: ['Fire Breath', 'Claws', 'Wings']
+      },
+    ];
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} monster`;
+    return {
+      id: 1,
+      name: 'Monster',
+      type: 'Dragon',
+      age: 100,
+      features: ['Fire Breath', 'Claws', 'Wings']
+    };
   }
 
   update(id: number, updateMonsterDto: UpdateMonsterDto) {
-    return `This action updates a #${id} monster`;
   }
 
   remove(id: number) {
-    return `This action removes a #${id} monster`;
   }
 }
